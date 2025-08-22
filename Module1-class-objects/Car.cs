@@ -9,9 +9,33 @@ namespace Module1_class_objects
     // Task 1: Create a Car Class
     public class Car
     {
+        // I am coding the first property like this,
+        // Just for my own understanding and future reference
+
+
+        // field/variable
+        // Initialize property with default value.
+      
+        private string brand; 
+
+        // property
+        public string Brand     
+        {
+            // get method
+            // return the value of the variable/field brand.
+            get { return brand; }
+            
+            // set method
+            // assign value to the variable/field brand.
+            set { brand = value; }
+        }
+
+
+        // Here I am using the shorcart version of above code
         
-        public  string Brand { get; set; }
-        public  string Model { get; set; }
+        public string Model { get; set; }
+
+      
         public int ManufacturingYear { get; set; }
         public int Mileage {  get; set; }
 
