@@ -2,12 +2,13 @@
 
 
 using Module1_class_objects;
+using System.Threading.Channels;
 
 
 //Task 2: Create Objects of the Class
 // Creating first car object: Toyota
 // Prefered approach
-Car myToyota = new Car
+Car Toyota = new Car
 {
     Brand = "Toyota",
     Model = "Corolla",
@@ -16,32 +17,38 @@ Car myToyota = new Car
 };
 
 // Access Drive method
-Console.WriteLine($"Initial mileage of {myToyota.Brand} {myToyota.Model} is: {myToyota.Mileage} km");
-myToyota.Drive(30);
-Console.WriteLine($"Total mileage of {myToyota.Brand} {myToyota.Model} is: {myToyota.Mileage} km");
+Console.WriteLine($"Initial mileage of {Toyota.Brand} {Toyota.Model} is: {Toyota.Mileage} km");
+Console.Write("Enter the mileage that your car drove: ");
+int givenMileageForToyota = Convert.ToInt32(Console.ReadLine());
+Toyota.Drive(givenMileageForToyota);
+Console.WriteLine($"Total mileage of {Toyota.Brand} {Toyota.Model} is: {Toyota.Mileage} km");
 
 //Task 3: Accessing ShowCarInfo method
-myToyota.ShowCarInfo();
-
+Toyota.ShowCarInfo();
+Console.Write("Enter the mileage that your car drove: ");
+int givenMileageForTesla = Convert.ToInt32(Console.ReadLine());
+Toyota.Drive(givenMileageForTesla);
 
 // Creating second car object: Tesla
 // alternate approach
 
-Car myTesla = new Car();
+Car Tesla = new Car();
 
-myTesla.Brand = "Tesla";
-myTesla.Model = "Model 3";
-myTesla.ManufacturingYear = 2025;
-myTesla.Mileage = 120;
+Tesla.Brand = "Tesla";
+Tesla.Model = "Model 3";
+Tesla.ManufacturingYear = 2025;
+Tesla.Mileage = 120;
 
 // Access Drive method
-Console.WriteLine($"Car {myTesla.Brand} {myTesla.Model} has driven {myTesla.Mileage} km");
-myTesla.Drive(30);
-Console.WriteLine($"Total mileage: {myTesla.Mileage}\n");
+Console.WriteLine($"Car {Tesla.Brand} {Tesla.Model} has driven {Tesla.Mileage} km");
+
+
+Tesla.Drive(30);
+Console.WriteLine($"Total mileage: {Tesla.Mileage}\n");
 
 
 //Task 3: Accessing ShowCarInfo method
-myTesla.ShowCarInfo();
+Tesla.ShowCarInfo();
 
 
 

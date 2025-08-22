@@ -27,6 +27,9 @@ namespace Module1_class_objects
 
 
         // property 
+        //simplified approach
+        //public string Brand { get; set; } = string.Empty;
+
         public string Brand                
         {
             // get method
@@ -38,7 +41,6 @@ namespace Module1_class_objects
             set { brand = value; }
         }
 
-
         /*
         Second approach: Make properties nullable
 
@@ -49,6 +51,24 @@ namespace Module1_class_objects
             ii) null (no value)
         */
         public string? Model { get; set; }
+        public int ManufacturingYear { get; set; }
+        public int Mileage {  get; set; }
+
+        // Creating Drive method
+       public void Drive( int kilometers)
+        {
+            
+            // updating the mileage
+            Mileage += kilometers;
+            Console.WriteLine($"Car {Brand} {Model} driven {kilometers} km. Total mileage is now: {Mileage} km");
+        }
+
+
+        // Creating ShowCarinfo method
+        public void ShowCarInfo()
+        {
+            Console.WriteLine($"\nCar info: Brand - {Brand}, Model - {Model}, Year - {ManufacturingYear}, Mileage - {Mileage} \n");
+        }
 
         #region
         /*
@@ -77,27 +97,6 @@ namespace Module1_class_objects
         }
         */
         #endregion
-
-
-
-        public int ManufacturingYear { get; set; }
-        public int Mileage {  get; set; }
-
-        // Creating Drive method
-       public void Drive( int kilometers)
-        {
-            
-            // updating the mileage
-            Mileage += kilometers;
-            Console.WriteLine($"Car {Brand} {Model} driven {kilometers} km. Total mileage is now: {Mileage} km");
-        }
-
-
-        // Creating ShowCarinfo method
-        public void ShowCarInfo()
-        {
-            Console.WriteLine($"\nCar info: Brand - {Brand}, Model - {Model}, Year - {ManufacturingYear}, Mileage - {Mileage} \n");
-        }
 
 
 
