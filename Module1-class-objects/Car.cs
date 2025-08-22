@@ -21,7 +21,7 @@ namespace Module1_class_objects
         So,Initializing property with default value.
         */
 
-        // First approach: Using Constructor.
+        // First approach:
         // field/variable
         private string brand = string.Empty;
 
@@ -62,7 +62,12 @@ namespace Module1_class_objects
         Fifth approach: (c# 11+) by using "required" modifier
         public required string Model { get; set; }
 
-        Sixth approach: Using Constructor to ensure propertis are initialized
+        
+        Sixth approach: Using Constructor 
+        To ensure propertis are initialized
+
+        public string Brand { get; set; }
+        public string Model { get; set; }
         public Car( string brand, string model)
         {
             Brand = brand;
