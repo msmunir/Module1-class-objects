@@ -25,9 +25,7 @@ Console.WriteLine($"Total mileage of {Toyota.Brand} {Toyota.Model} is: {Toyota.M
 
 //Task 3: Accessing ShowCarInfo method
 Toyota.ShowCarInfo();
-Console.Write("Enter the mileage that your car drove: ");
-int givenMileageForTesla = Convert.ToInt32(Console.ReadLine());
-Toyota.Drive(givenMileageForTesla);
+
 
 // Creating second car object: Tesla
 // alternate approach
@@ -41,9 +39,9 @@ Tesla.Mileage = 120;
 
 // Access Drive method
 Console.WriteLine($"Car {Tesla.Brand} {Tesla.Model} has driven {Tesla.Mileage} km");
-
-
-Tesla.Drive(30);
+Console.Write("Enter the mileage that your car drove: ");
+int givenMileageForTesla = Convert.ToInt32(Console.ReadLine());
+Tesla.Drive(givenMileageForTesla);
 Console.WriteLine($"Total mileage: {Tesla.Mileage}\n");
 
 
