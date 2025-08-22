@@ -68,6 +68,8 @@ namespace Module1_class_objects
 
         public string Brand { get; set; }
         public string Model { get; set; }
+        public int ManufacturingYear { get; set; }
+        public int Mileage {  get; set; }
         public Car( string brand, string model)
         {
             Brand = brand;
